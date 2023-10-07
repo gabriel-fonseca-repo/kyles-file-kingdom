@@ -75,3 +75,13 @@ shape = SubResource("RectangleShape2D_k147v")
 position = Vector2(0, 3.05176e-05)
 scale = Vector2(0.651899, 0.651899)
 texture = ExtResource("2_b2gf0")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 809.0
+offset_top = 482.0
+offset_right = 1042.0
+offset_bottom = 545.0
+placeholder_text = "ESCREVA AQUI"
+alignment = 1
+
+[connection signal="text_changed" from="LineEdit" to="Graph" method="_on_line_edit_text_changed"]
