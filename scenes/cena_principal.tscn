@@ -1,3 +1,77 @@
-[gd_scene format=3 uid="uid://6tkp12gnbs81"]
+[gd_scene load_steps=5 format=3 uid="uid://6tkp12gnbs81"]
+
+[ext_resource type="Script" path="res://scenes/Graph.gd" id="1_d7iph"]
+[ext_resource type="Texture2D" uid="uid://b6nohn8mycbe6" path="res://imagens/kyle.png" id="2_b2gf0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpgu5"]
+size = Vector2(12.8, 12.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k147v"]
+size = Vector2(12.8, 12.8)
 
 [node name="Raiz" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.501961, 0.501961, 0.501961, 1)
+metadata/_edit_lock_ = true
+
+[node name="Graph" type="Node2D" parent="."]
+script = ExtResource("1_d7iph")
+
+[node name="V1" type="RigidBody2D" parent="Graph"]
+position = Vector2(160, 480)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graph/V1"]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_rpgu5")
+
+[node name="Kyle" type="Sprite2D" parent="Graph/V1"]
+position = Vector2(0, 3.05176e-05)
+scale = Vector2(0.651899, 0.651899)
+texture = ExtResource("2_b2gf0")
+
+[node name="V2" type="RigidBody2D" parent="Graph"]
+position = Vector2(352, 160)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graph/V2"]
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_k147v")
+
+[node name="Kyle" type="Sprite2D" parent="Graph/V2"]
+position = Vector2(0, 3.05176e-05)
+scale = Vector2(0.651899, 0.651899)
+texture = ExtResource("2_b2gf0")
+
+[node name="V3" type="RigidBody2D" parent="Graph"]
+position = Vector2(544, 480)
+mass = 0.01
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graph/V3"]
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_k147v")
+
+[node name="Kyle" type="Sprite2D" parent="Graph/V3"]
+position = Vector2(0, 3.05176e-05)
+scale = Vector2(0.651899, 0.651899)
+texture = ExtResource("2_b2gf0")
+
+[node name="V4" type="RigidBody2D" parent="Graph"]
+position = Vector2(736, 160)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graph/V4"]
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_k147v")
+
+[node name="Kyle" type="Sprite2D" parent="Graph/V4"]
+position = Vector2(0, 3.05176e-05)
+scale = Vector2(0.651899, 0.651899)
+texture = ExtResource("2_b2gf0")
