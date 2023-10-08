@@ -1,14 +1,5 @@
 extends Node2D
 
-var regex = RegEx.new()
-var last_regex_match = ""
-
-func _ready():
-	regex.compile("(b*((a+b)+b)*)+")
-
-func _process(delta):
-	pass
-
 func _draw():
 	var fonte = preload("res://fonts/coolvetica.otf")
 	
@@ -40,11 +31,3 @@ func add_space(ponto: Vector2) -> Vector2:
 	ponto.x += 10
 	ponto.y += 10
 	return ponto
-
-
-func _on_line_edit_text_changed(new_text):
-	var result = regex.search(new_text)
-	
-	if result and !result.get_string().is_empty() and result.get_string() != last_regex_match:
-		last_regex_match = result.get_string()
-		print(last_regex_match + " [ENCONTRADO]")
