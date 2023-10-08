@@ -12,10 +12,6 @@ func _draw():
 	var entre_V2_e_V3 = add_space(encontrar_ponto_central(V2.get_global_position(), V3.get_global_position()))
 	var entre_V3_e_V4 = add_space(encontrar_ponto_central(V3.get_global_position(), V4.get_global_position()))
 
-	draw_line(V1.get_global_position(), V2.get_global_position(), Color.AQUA, 2.0, true)
-	draw_line(V2.get_global_position(), V3.get_global_position(), Color.AQUA, 2.0, true)
-	draw_line(V3.get_global_position(), V4.get_global_position(), Color.AQUA, 2.0, true)
-
 	draw_string(fonte, entre_V1_e_V2, "A")
 	draw_string(fonte, entre_V2_e_V3, "B")
 	draw_string(fonte, entre_V3_e_V4, "C")
